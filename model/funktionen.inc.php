@@ -1,21 +1,11 @@
 <?php
     
     function leerer_eintrag(){
-        $eintrag = array('vorname' => '', 'nachname' => '', 'email' => '', 'id' => '');
+        $eintrag = array('vorname' => '', 'nachname' => '', 'email' => '', 'id' => '','tel' => '');
      
         return $eintrag;
     }
 
-    function hole_eintrag($id)
-    {
-        if (empty($id)) {
-            $id = 0;
-        }
-        $eintraege = unserialize(file_get_contents('eintraege.txt'));
-        $eintrag = $eintraege[$id];
-        $eintrag['id'] = $id;
-        return $eintrag;
-    }
 
     function speichere_eintrag($post)
     {
