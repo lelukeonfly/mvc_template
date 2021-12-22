@@ -2,11 +2,14 @@
     require_once 'model/funktionen.inc.php';
     require_once 'model/database.inc.php';
     
+
+    $aktion = isset($_REQUEST['aktion'])?$_REQUEST['aktion']:'zeige_alle';
+    
     // Aktion bestimmen
-    if (isset ($_REQUEST['aktion']))
-        $aktion = $_REQUEST['aktion'];
-    else
-        $aktion = 'zeige_alle';
+    #if (isset ($_REQUEST['aktion']))
+    #    $aktion = $_REQUEST['aktion'];
+    #else
+    #    $aktion = 'zeige_alle';
     
     // LOGIK
     switch($aktion) {
