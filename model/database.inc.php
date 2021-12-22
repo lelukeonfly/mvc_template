@@ -34,6 +34,13 @@
         }
         $db->query($query);
     }
+
+    function loeschen($id)
+    {
+        $db = getDatabase();
+        $query = "DELETE FROM adressen WHERE id=$id";
+        $db->query($query);
+    }
     
     function hole_eintrag($id)
     {

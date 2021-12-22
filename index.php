@@ -27,7 +27,11 @@
         	$eintrag = hole_eintrag($_REQUEST['id']);
         	$aktion = 'formular_anzeigen';
     		break;	
-        	
+        case "loeschen":
+            $eintrag = loeschen($_REQUEST['id']);
+            $adressen = getAdressen();
+            $aktion = 'zeige_alle';
+            break;
     }
     
     // SICHT
